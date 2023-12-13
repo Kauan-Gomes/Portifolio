@@ -1,9 +1,11 @@
 'use client'
 import Typed from 'typed.js';
-import React, { useEffect } from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import Image from 'next/image';
 
+
 export default function Home() {
+
   useEffect(() => {
     // Configuração do Typed.js
     const options = {
@@ -27,8 +29,9 @@ export default function Home() {
 
 
   return (
-    <div className='
-    h-[90vh] my-10  flex flex-col items-center 
+    <div
+    className='
+    h-auto my-10  flex flex-col items-center 
     sm:flex-row sm:h-[35vh] sm:items-center sm:justify-center sm:p-5 
     md:md:h-[35vh] md:mb-40 md:items-end
     lg:h-[40vh] lg:text-center
@@ -69,6 +72,7 @@ export default function Home() {
               src='/fotoPerfil.jpg'
               alt='Alternative text for the image'
               layout='responsive'
+              loading="lazy"
               sizes='(min-width: 640px) 30vw, 50vw' 
               className='content object-cover'
             />

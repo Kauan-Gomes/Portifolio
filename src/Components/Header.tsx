@@ -21,16 +21,16 @@ function Header() {
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElNav(event.currentTarget);
     };
-    
+
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
 
     return (
-        <AppBar position="static" sx={{ backgroundColor: 'transparent', border:'none' }}>
+        <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters sx={{ color: 'black', display: 'flex', justifyContent: 'space-around' }}>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none',} }}>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', } }}>
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -78,11 +78,11 @@ function Header() {
                             fontFamily: 'monospace',
                             fontWeight: 700,
                             letterSpacing: '.3rem',
-                            color: 'inherit',
+                            color: 'white',
                             textDecoration: 'none',
                         }}
                     >
-                        LOGO
+                        &lt;Kauan/&gt;
                     </Typography>
 
 
@@ -99,11 +99,11 @@ function Header() {
                                 fontFamily: 'monospace',
                                 fontWeight: 700,
                                 letterSpacing: '.3rem',
-                                color: 'inherit',
+                                color: 'white',
                                 textDecoration: 'none',
                             }}
                         >
-                            Logo
+                            &lt;Kauan/&gt;
                         </Typography>
                     </Box>
 
