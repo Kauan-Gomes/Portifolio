@@ -29,7 +29,7 @@ function Header() {
     return (
         <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
             <Container maxWidth="xl">
-                <Toolbar disableGutters sx={{ color: 'black', display: 'flex', justifyContent: 'space-around' }}>
+                <Toolbar disableGutters sx={{ color: 'white', display: 'flex', justifyContent: 'space-around' }}>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', } }}>
                         <IconButton
                             size="large"
