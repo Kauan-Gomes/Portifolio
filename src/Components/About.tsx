@@ -4,7 +4,7 @@ import React from 'react'
 export default function About() {
     return (
         <section className='text-white flex flex-col items-center'>
-            <h2 className='text-3xl'>Sobre Mim</h2>
+            <h2 className='text-3xl texto_alternativo'>Sobre Mim</h2>
             <div className='flex flex-col items-center text-center m-4 gap-5 md:mx-16 lg:flex-row lg:justify-center'>
                 <div className='flex flex-col gap-5 lg:w-3/6'>
                     <p>

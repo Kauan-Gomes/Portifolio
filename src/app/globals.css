@@ -5,9 +5,11 @@
 
 
 
-
-:root {
-  font-family:'Silkscreen', sans-serif;
+@layer base{
+  
+}
+.texto_alternativo{
+  font-family:"Silkscreen", sans-serif;
 }
 
 .bubble-background {
@@ -15,10 +17,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
-  z-index: 1;
-  /* Adiciona bolhas desfocadas usando radial-gradient */
+  pointer-events: auto;
+  z-index: -1;
   background: radial-gradient(circle closest-corner at 50% 50%, rgb(105, 2, 2) 5%, rgb(27, 2, 87) 70%, rgb(12, 2, 2) 80%);
-  /* background-image: repeating-linear-gradient(30deg, #3b0f0f 20%, #030324 50%, #0a3142 70%); */
+  
 }
 

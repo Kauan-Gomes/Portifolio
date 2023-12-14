@@ -6,7 +6,7 @@ import Skills from '@/Components/Skills';
 
 export default function HomePage() {
   return (
-    <main className='bg-black/30 bubble-background'>
+    <main className='bg-black/30 bubble-background '>
       <Header />
       <Home />
       <About/>

@@ -44,10 +44,10 @@ export default function Portifolio() {
     const Cards = ['Trabalho 1', 'Trabalho 2', 'Trabalho 3', 'Trabalho 4']
 
     return (
-        <section className='flex flex-col items-center text-white h-auto gap-10'>
+        <section className='flex flex-col items-center text-white h-auto gap-10 '>
             <div className='text-center'>
-                <h2 className='text-3xl '>Projetos</h2>
-                <h3>dsfsdfsd</h3>
+                <h2 className='text-3xl texto_alternativo'>Projetos</h2>
+                <h3 className='text-md'>Exploração dos Trabalhos Recentes</h3>
             </div>
             <div className='flex flex-col gap-10 md:flex-row md:flex-wrap md:items-center md:justify-center'> 
                 {Cards.map((item) => <Card trabalho={item} key={item} />)}
