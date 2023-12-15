@@ -3,6 +3,7 @@ import Home from '@/Components/Home'
 import Portifolio from '@/Components/Portifolio'
 import About from '@/Components/About';
 import Skills from '@/Components/Skills';
+import Contato from '@/Components/Contato';
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <About/>
       <Portifolio />
       <Skills/>
+      <Contato/>
     </main>
   )
 }

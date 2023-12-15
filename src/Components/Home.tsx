@@ -9,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     // Configuração do Typed.js
     const options = {
-      strings: ["Hello, I'm Kauan Gomes", "I'm <span class='text-red-400'>Web Developer</span>"],
+      strings: ["Hello, I'm Kauan Gomes", "I'm <span class='text-purple-700'>Web Developer</span>"],
       typeSpeed: 150,
       backSpeed: 25,
       backDelay: 1500,
