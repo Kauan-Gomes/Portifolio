@@ -5,9 +5,6 @@
 
 
 
-@layer base{
-  
-}
 .texto_alternativo{
   font-family:"Silkscreen", sans-serif;
 }
@@ -19,7 +16,6 @@
   height: 100%;
   pointer-events: auto;
   z-index: -1;
-  background: radial-gradient(circle closest-corner at 50% 50%, rgb(105, 2, 2) 5%, rgb(27, 2, 87) 70%, rgb(12, 2, 2) 80%);
-  
+  background-image: linear-gradient(to left  , black 30%, red 10%, black 30%, red 10%, black 0%);
 }
 

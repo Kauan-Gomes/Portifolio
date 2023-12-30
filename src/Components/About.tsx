@@ -1,9 +1,35 @@
+'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { gsap } from 'gsap'
+
 
 export default function About() {
+    useLayoutEffect(() => {
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.to(".sobre", {
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            rotate: "0deg",
+            scrollTrigger: {
+                trigger: ".sobre",
+                markers: true,
+                start: "top 330px",
+                end: "bottom 500px",
+                scrub:true,
+            }
+        })
+
+        return () => {
+            gsap.killTweensOf(".sobre")
+        }
+    }, [])
+
+
     return (
-        <section className='text-white flex flex-col items-center'>
+        <section className='text-white flex flex-col items-center -translate-x-[800px] opacity-0  sobre'>
             <h2 className='text-3xl texto_alternativo'>Sobre Mim</h2>
             <div className='flex flex-col items-center text-center m-4 gap-5 md:mx-16 lg:flex-row lg:justify-center'>
                 <div className='flex flex-col gap-5 lg:w-3/6'>

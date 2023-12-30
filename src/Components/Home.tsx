@@ -2,9 +2,24 @@
 import Typed from 'typed.js';
 import React, { useEffect, useLayoutEffect } from 'react'
 import Image from 'next/image';
+import {ScrollTrigger} from 'gsap/ScrollTrigger'
+import {gsap} from 'gsap'
+
 
 
 export default function Home() {
+  useLayoutEffect(() => {
+      gsap.to(".home", {
+        x:0,
+        opacity:1,
+        duration: 1,
+        rotate:"0deg",
+      })
+
+      return () => {
+        gsap.killTweensOf(".home")
+      }
+  },[])
 
   useEffect(() => {
     // Configuração do Typed.js
@@ -31,8 +46,8 @@ export default function Home() {
 
   return (
     <div
-      className='
-    h-auto flex flex-col items-center overflow-hidden my-10
+      className=' home
+    h-auto flex flex-col items-center overflow-hidden my-10 -translate-x-[800px] opacity-0 rotate-180
     sm:flex-row sm:items-center sm:justify-center sm:p-5 
     md:md:
     lg:h-[40vh] lg:text-center
