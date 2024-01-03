@@ -2,29 +2,38 @@
 import Typed from 'typed.js';
 import React, { useEffect, useLayoutEffect } from 'react'
 import Image from 'next/image';
-import {ScrollTrigger} from 'gsap/ScrollTrigger'
-import {gsap} from 'gsap'
+import { gsap } from 'gsap'
 
 
 
 export default function Home() {
-  useLayoutEffect(() => {
-      gsap.to(".home", {
-        x:0,
-        opacity:1,
-        duration: 1,
-        rotate:"0deg",
-      })
 
-      return () => {
-        gsap.killTweensOf(".home")
-      }
-  },[])
+  useLayoutEffect(() => {
+    gsap.fromTo(".home",
+    {
+      x:0,
+      y:-70,
+      opacity: 0,
+      duration: 1,
+      rotate: "0deg",
+    },
+    {
+      x: 0,
+      y:0,
+      opacity: 1,
+      duration: 1,
+      rotate: "0deg",
+    })
+
+    return () => {
+      gsap.killTweensOf(".home")
+    }
+  }, [])
 
   useEffect(() => {
     // Configuração do Typed.js
     const options = {
-      strings: ["Hello, I'm Kauan Gomes", "I'm <span class='text-purple-700'>Web Developer</span>"],
+      strings: ["Hello, I'm <span class='gradient-text'>Kauan Gomes</span>", "I'm <span class='gradient-text'>Web Developer</span>"],
       typeSpeed: 150,
       backSpeed: 25,
       backDelay: 1500,
@@ -35,7 +44,7 @@ export default function Home() {
     };
 
     // Inicialização do Typed.js
-    const typed = new Typed('#typed-output', options);
+    const typed = new Typed('.titulo', options);
 
     // Limpar a instância do Typed.js quando o componente for desmontado
     return () => {
@@ -45,65 +54,59 @@ export default function Home() {
 
 
   return (
-    <div
-      className=' home
-    h-auto flex flex-col items-center overflow-hidden my-10 -translate-x-[800px] opacity-0 rotate-180
-    sm:flex-row sm:items-center sm:justify-center sm:p-5 
-    md:md:
-    lg:h-[40vh] lg:text-center
-    xl:
-    '>
-      <div className='
-      text-white flex flex-col items-center 
-      sm:w-3/6 
-      md:w-4/6
-      
-      '>
-        <h1 className='
-        texto_alternativo
-        h-20 text-4xl text-center font-bold mx-2 py-0 w-full
-        sm:h-10
-        md:text-2xl 
-        lg:text-3xl
-        '
-          id='typed-output'></h1>
-        <div className='w-4/6 flex flex-col gap-5 lg:justify-center items-center'>
-          <p className='text-xl text-center my-5 sm:my-0 md:text-base'>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
-          <div className='flex gap-5'>
-            <button className='relative h-14 w-auto px-5 flex gap-3 items-center py-2 border font-bold rounded-lg cursor-pointer'>
-              <div className='h-7 w-7'>
-                <Image
-                  height={10}
-                  width={10}
-                  src='/icons/linkedin.svg'
-                  alt='Alternative text for the image'
-                  layout='responsive'
-                  loading="lazy"
-                  sizes='(min-width: 640px) 30vw, 50vw'
-                  className='text-white '
-                />
-              </div>
-              <a className='' href="">Linkedin</a>
-            </button>
-            <button className='relative h-14 w-auto px-5 flex gap-3 items-center py-2 border font-bold rounded-lg cursor-pointer'>
-              <div className='h-7 w-7'>
-                <Image
-                  height={10}
-                  width={10}
-                  src='/icons/github.svg'
-                  alt='Alternative text for the image'
-                  layout='responsive'
-                  loading="lazy"
-                  sizes='(min-width: 640px) 30vw, 50vw'
-                  className='text-white '
-                />
-              </div>
-              <a className='' href="">Github</a>
-            </button>
+    <>
+      <div className=' text-white h-screen flex justify-center px-7 home opacity-0'>
+        <div className='flex flex-col justify-center gap-7'>
+          <h1 className='titulo text-5xl text-center font-semibold h-28'></h1>
+          <div className=' flex flex-col justify-center items-center gap-5 text-center'>
+            <p className=''>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
+            <div className='flex gap-5'>
+              <button className='relative h-14 w-auto flex gap-3 items-center p-[1px] font-bold rounded-lg cursor-pointer'>
+                <div className='absolute bubble-background2 h-full w-full left-0 rounded-lg z-0'></div>
+                <div className=' flex justify-center items-center h-full w-36 bg-black z-10 rounded-lg gap-4'>
+                  <div className='h-7 w-7'>
+                    <Image
+                      height={10}
+                      width={10}
+                      src='/icons/linkedin.svg'
+                      alt='Alternative text for the image'
+                      layout='responsive'
+                      loading="lazy"
+                      sizes='(min-width: 640px) 30vw, 50vw'
+                      className='text-white '
+                    />
+                  </div>
+                  <a className='' href="">Linkedin</a>
+                </div>
+
+              </button>
+              <button className='relative h-14 w-auto flex gap-3 items-center p-[1px] font-bold rounded-lg cursor-pointer'>
+                <div className='absolute bubble-background2 h-full w-full left-0 rounded-lg z-0'></div>
+                <div className=' flex justify-center items-center h-full w-36 bg-black z-10 rounded-lg gap-4'>
+                  <div className='h-7 w-7'>
+                    <Image
+                      height={10}
+                      width={10}
+                      src='/icons/github.svg'
+                      alt='Alternative text for the image'
+                      layout='responsive'
+                      loading="lazy"
+                      sizes='(min-width: 640px) 30vw, 50vw'
+                      className='text-white '
+                    />
+                  </div>
+                  <a className='' href="">Github</a>
+                </div>
+
+              </button>
+            </div>
           </div>
         </div>
+
       </div>
 
-    </div>
+    
+
+    </>
   )
 }

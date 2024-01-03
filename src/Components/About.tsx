@@ -15,7 +15,7 @@ export default function About() {
             rotate: "0deg",
             scrollTrigger: {
                 trigger: ".sobre",
-                markers: true,
+                markers: false,
                 start: "top 330px",
                 end: "bottom 500px",
                 scrub:true,
