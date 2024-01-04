@@ -8,7 +8,7 @@ import { gsap } from 'gsap'
 
 export default function Home() {
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     gsap.fromTo(".home",
       {
         x: 0,
@@ -33,7 +33,7 @@ export default function Home() {
   useEffect(() => {
     // Configuração do Typed.js
     const options = {
-      strings: ["Hello, I'm <span class='gradient-text'>Kauan Gomes</span>", "I'm <span class='gradient-text'>Web Developer</span>"],
+      strings: ["Hello, I'm <br> <span class='gradient-text'>Kauan Gomes</span>", "I'm <span class='gradient-text'>Web Developer</span>"],
       typeSpeed: 150,
       backSpeed: 25,
       backDelay: 1500,
@@ -72,12 +72,12 @@ export default function Home() {
 
   return (
     <>
-      <div className=' text-white h-screen flex justify-center px-7 home opacity-0 '>
-        <div className='flex flex-col justify-center gap-7 md:w-8/12'>
-          <h1 className='titulo text-5xl text-center font-semibold h-28'></h1>
+      <div className=' text-white h-auto flex justify-center px-7 home opacity-0 '>
+        <div className='flex flex-col justify-center md:w-8/12'>
+          <h1 className='titulo text-5xl text-center font-semibold h-36 my-10'></h1>
           <div className='flex flex-col justify-center items-center gap-5 text-center'>
-            <p className='text-bold'>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown</p>
-            <div className='flex gap-5'>
+            <p className='text-bold lg:w-5/6 xl:w-3/6'>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown</p>
+            <div className='flex gap-5 my-10'>
               <button
                 onMouseEnter={(e) => HandleMouseEnter(e.currentTarget)}
                 onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
@@ -90,7 +90,6 @@ export default function Home() {
                       width={10}
                       src='/icons/linkedin.svg'
                       alt='Alternative text for the image'
-                      layout='responsive'
                       loading="lazy"
                       sizes='(min-width: 640px) 30vw, 50vw'
                       className='text-white '
@@ -112,7 +111,6 @@ export default function Home() {
                       width={10}
                       src='/icons/github.svg'
                       alt='Alternative text for the image'
-                      layout='responsive'
                       loading="lazy"
                       sizes='(min-width: 640px) 30vw, 50vw'
                       className='text-white '
