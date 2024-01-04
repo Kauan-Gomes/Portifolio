@@ -1,6 +1,6 @@
 import Header from '@/Components/Header'
 import Home from '@/Components/Home'
-import Portifolio from '@/Components/Portifolio'
+import Portifolio from '@/Components/Projetos'
 import About from '@/Components/About';
 import Skills from '@/Components/Skills';
 import Contato from '@/Components/Contato';

@@ -37,7 +37,7 @@ export default function About() {
             ease: "power2.out",
             scrollTrigger: {
                 trigger: ".sobre-lg",
-                markers: true,
+                markers: false,
                 start: "top 330px",
                 end: "bottom 580px",
                 scrub: true,
@@ -51,7 +51,7 @@ export default function About() {
 
     useEffect(() => {
         const colors = ['#1ae64d', '#189ddb', '#1ae64d', '#189ddb'];
-        const durationPerColor = 2;
+        const durationPerColor = 0.5;
 
         const gradientElement = document.querySelector(".sobre .borda-inferior");
 
