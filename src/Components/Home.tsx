@@ -1,7 +1,7 @@
 'use client'
 import Typed from 'typed.js';
 import React, { useEffect, useLayoutEffect } from 'react'
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { gsap } from 'gsap'
 
 

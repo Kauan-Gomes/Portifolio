@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import React from 'react'
 
 const icones = ['/icons/bootstrap.svg', '/icons/react.svg', '/icons/storybook.svg', '/icons/tailwind.svg', '/icons/typescript.svg', '/icons/html.svg', '/icons/js.svg', '/icons/nextjs.svg', '/icons/css-3.svg']
