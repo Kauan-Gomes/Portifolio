@@ -18,11 +18,11 @@ export default function HomePage() {
     <main className='bg-black/30 bubble-background '>
       <Header />
       <Home />
-      <About/>
+      {/* <About/>
       <Portifolio />
       <Skills/>
       <Contato/>
-      <Footer/>
+      <Footer/> */}
     </main>
   )
 }
