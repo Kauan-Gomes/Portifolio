@@ -48,7 +48,7 @@ function Carousel() {
     const HandleMouseEnter = (e: any) => {
         console.log(e)
         gsap.to(e.querySelector('.Selecionado'), {
-            background: 'linear-gradient(to right, #09ff4626, #189ddb)',
+            background: 'linear-gradient(to right, #3b83e2, #24b42b)',
             duration: 0.5, // ajuste a duração conforme necessário
             ease: 'power2.inOut',
         });
@@ -56,41 +56,38 @@ function Carousel() {
 
     const handleMouseLeave = (e: any) => {
         gsap.to(e.querySelector('.Selecionado'), {
-            background: 'linear-gradient(to right, #fff, #fff)',
+            background: 'linear-gradient(to right, #000000, #000000)',
             duration: 0.3, // ajuste a duração conforme necessário
             ease: 'power2.inOut',
         })
     }
 
     return (
-        <div className="relative h-[500px] w-8/12 bg-white flex flex-col justify-between overflow-hidden rounded-lg">
-            <div className=" h-4/5 bg-green-700">
+        <div className="relative h-[70vh] w-8/12 bg-white flex flex-col justify-between rounded-lg">
+            <button className="absolute h-16 w-16 bg-red-400 top-2/4 -left-7 rounded-full flex justify-center items-center ">
+                <img src="/icons/arrow.svg" alt="" className="h-10 " />
+            </button>
+            <button className="absolute h-16 w-16 bg-red-400 top-2/4 -right-7 rounded-full flex justify-center items-center rotate-180">
+                <img src="/icons/arrow.svg" alt="" className="h-10 " />
+            </button>
+            <div className=" h-4/5 rounded-full">
                 <img
                     src='/images.jpg'
                     alt='Alternative text for the image'
-                    className="w-full h-full object-cover "
+                    className="w-full h-full object-cover rounded-lg"
                     style={{ objectPosition: 'center top' }}
                 />
             </div>
-            <div className="h-1/5 bg-white py-2 pl-5 text-black border-t-2">
+            <div className="h-1/5 bg-white py-2 px-5 text-black border-t-2 flex justify-between rounded-b-lg">
                 <h2 className="font-bold">Serenatto</h2>
-                <div className="flex ">
+                <div className="flex gap-3 items-end">
                     <button
                         onMouseEnter={(e) => HandleMouseEnter(e.currentTarget)}
                         onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
-                        className='relative h-8 w-auto flex gap-3 items-center p-[1px] font-bold rounded-lg cursor-pointer hover'>
-                        <div className='absolute bubble-background2 h-full w-full left-0 rounded-lg z-0'></div>
+                        className='relative h-8 w-auto flex gap-3 items-center bg-black text-white font-semibold rounded-lg cursor-pointer hover'>
                         <div className=' flex justify-center items-center h-full w-36 z-10 rounded-lg gap-4 Selecionado'>
                             <div className='h-5 w-5'>
-                                <Image
-                                    height={10}
-                                    width={10}
-                                    src='/icons/github.svg'
-                                    alt='Alternative text for the image'
-                                    loading="lazy"
-                                    sizes='(min-width: 640px) 30vw, 50vw'
-                                    className='bg-transparent rounded-full'
-                                />
+                                <img src="/icons/github.svg" alt="Alternative text for the image" />
                             </div>
                             <a className='' href="">Repositório</a>
                         </div>
@@ -98,19 +95,10 @@ function Carousel() {
                     <button
                         onMouseEnter={(e) => HandleMouseEnter(e.currentTarget)}
                         onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
-                        className='relative h-8 w-auto flex gap-3 items-center p-[1px] font-bold rounded-lg cursor-pointer hover'>
-                        <div className='absolute bubble-background2 h-full w-full left-0 rounded-lg z-0'></div>
+                        className='relative h-8 w-auto flex gap-3 items-center bg-black text-white font-semibold rounded-lg cursor-pointer hover'>
                         <div className=' flex justify-center items-center h-full w-36 z-10 rounded-lg gap-4 Selecionado'>
                             <div className='h-5 w-5'>
-                                <Image
-                                    height={10}
-                                    width={10}
-                                    src='/icons/linkedin.svg'
-                                    alt='Alternative text for the image'
-                                    loading="lazy"
-                                    sizes='(min-width: 640px) 30vw, 50vw'
-                                    className='bg-transparent rounded-full'
-                                />
+                                <img src="/icons/linkedin.svg" alt="Alternative text for the image" />
                             </div>
                             <a className='' href="">Deploy</a>
                         </div>
