@@ -17,8 +17,8 @@ export default function HomePage() {
   return (
     <main className='bg-black/30 bubble-background '>
       <Header />
-      {/* <Home />
-      <About/>
+      <Home />
+      {/* <About/>
       <Portifolio />
       <Skills/>
       <Contato/>
