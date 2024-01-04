@@ -63,7 +63,7 @@ function Carousel() {
     }
 
     return (
-        <div className="relative h-96 w-8/12 bg-white flex flex-col justify-between overflow-hidden rounded-lg">
+        <div className="relative h-[500px] w-8/12 bg-white flex flex-col justify-between overflow-hidden rounded-lg">
             <div className=" h-4/5 bg-green-700">
                 <img
                     src='/images.jpg'

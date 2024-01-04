@@ -85,15 +85,7 @@ export default function Home() {
                 <div className='absolute bubble-background2 h-full w-full left-0 rounded-lg z-0'></div>
                 <div className='flex justify-center items-center h-full w-36 bg-black z-10 rounded-lg gap-4 Selecionado'>
                   <div className='h-7 w-7'>
-                    <Image
-                      height={10}
-                      width={10}
-                      src='/icons/linkedin.svg'
-                      alt='Alternative text for the image'
-                      loading="lazy"
-                      sizes='(min-width: 640px) 30vw, 50vw'
-                      className='text-white '
-                    />
+                    <img src="/icons/linkedin.svg" alt="Alternative text for the image" />
                   </div>
                   <a className='' href="">Linkedin</a>
                 </div>
@@ -106,15 +98,7 @@ export default function Home() {
                 <div className='absolute bubble-background2 h-full w-full left-0 rounded-lg z-0'></div>
                 <div className=' flex justify-center items-center h-full w-36 bg-black z-10 rounded-lg gap-4 Selecionado'>
                   <div className='h-7 w-7'>
-                    <Image
-                      height={10}
-                      width={10}
-                      src='/icons/github.svg'
-                      alt='Alternative text for the image'
-                      loading="lazy"
-                      sizes='(min-width: 640px) 30vw, 50vw'
-                      className='text-white '
-                    />
+                  <img src="/icons/github.svg" alt="Alternative text for the image" />
                   </div>
                   <a className='' href="">Github</a>
                 </div>

@@ -1,4 +1,3 @@
-import Image from "next/legacy/image"
 import React from 'react'
 
 const icones = ['/icons/bootstrap.svg', '/icons/react.svg', '/icons/storybook.svg', '/icons/tailwind.svg', '/icons/typescript.svg', '/icons/html.svg', '/icons/js.svg', '/icons/nextjs.svg', '/icons/css-3.svg']
@@ -14,16 +13,10 @@ export default function Skills() {
       <ul className='h-96 flex justify-center flex-wrap gap-5 overflow-hidden '>
         {icones.map((item) =>
           <li key={item} className='h-16 w-16  rounded-lg'>
-            <Image
-              height={50}
-              width={50}
+            <img
               src={item}
-              alt='Alternative text for the image'
-              layout='responsive'
-              loading="lazy"
-              sizes='(min-width: 640px) 30vw, 50vw'
-              className='text-white'
-            />
+              className='content object-cover'
+              alt="Alternative text for the image" />
           </li>
         )}
       </ul>

@@ -130,15 +130,10 @@ export default function About() {
 
                     <div className='relative my-10 flex items-center justify-center h-48 w-48 p-1 md:h-60 md:w-60 bubble-background2 rounded-full'>
                         <div className='h-full w-full rounded-full overflow-hidden'>
-                            <Image
-                                height={100}
-                                width={100}
-                                src='/fotoPerfil.jpg'
-                                alt='Alternative text for the image'
-                                loading="lazy"
-                                sizes='(min-width: 640px) 30vw, 50vw'
+                            <img
+                                src="/fotoPerfil.jpg"
                                 className='content object-cover'
-                            />
+                                alt="Alternative text for the image" />
                         </div>
                     </div>
                 </div>
@@ -168,15 +163,10 @@ export default function About() {
 
                     <div className='relative my-10 flex items-center justify-center h-56 w-56 p-1 md:h-60 md:w-60 bubble-background2 rounded-full'>
                         <div className='h-full w-full rounded-full overflow-hidden'>
-                            <Image
-                                height={100}
-                                width={100}
-                                src='/fotoPerfil.jpg'
-                                alt='Alternative text for the image'
-                                loading="lazy"
-                                sizes='(min-width: 640px) 30vw, 50vw'
+                            <img
+                                src="/fotoPerfil.jpg"
                                 className='content object-cover'
-                            />
+                                alt="Alternative text for the image" />
                         </div>
                     </div>
                 </div>
