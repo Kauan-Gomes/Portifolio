@@ -78,7 +78,7 @@ export default function Home() {
           <div className='flex flex-col justify-center items-center gap-5 text-center'>
             <p className='text-bold lg:w-5/6 xl:w-3/6'>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown</p>
             <div className='flex gap-5 my-10'>
-              <button
+              {/* <button
                 onMouseEnter={(e) => HandleMouseEnter(e.currentTarget)}
                 onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
                 className='relative h-14 w-auto flex gap-3 items-center p-[1px] font-bold rounded-lg cursor-pointer'>
@@ -102,7 +102,7 @@ export default function Home() {
                   </div>
                   <a className='' href="">Github</a>
                 </div>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
