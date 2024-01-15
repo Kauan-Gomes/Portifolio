@@ -50,8 +50,8 @@ export default function About() {
     }, [])
 
     useEffect(() => {
-        const colors = ['#1ae64d', '#189ddb', '#1ae64d', '#189ddb'];
-        const durationPerColor = 0.5;
+        const colors = ['#e61aba', '#189ddb', '#1ae64d', '#db1818'];
+        const durationPerColor = 0.1;
 
         const gradientElement = document.querySelector(".sobre .borda-inferior");
 
