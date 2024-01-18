@@ -50,8 +50,8 @@ export default function About() {
     }, [])
 
     useEffect(() => {
-        const colors = ['#e61aba', '#189ddb', '#1ae64d', '#db1818'];
-        const durationPerColor = 0.1;
+        const colors = ['#1ae64d', '#189ddb', '#1ae64d', '#189ddb'];
+        const durationPerColor = 0.5;
 
         const gradientElement = document.querySelector(".sobre .borda-inferior");
 
@@ -79,7 +79,7 @@ export default function About() {
 
     useEffect(() => {
         const colors = ['#1ae64d', '#189ddb', '#1ae64d', '#189ddb'];
-        const durationPerColor = 2;
+        const durationPerColor = 0.5;
 
         const gradientElement = document.querySelector(".sobre-lg .borda-inferior");
 
@@ -111,28 +111,21 @@ export default function About() {
                     <h2 className='text-3xl texto_alternativo relative'>Sobre Mim</h2>
                     <span className="w-full h-0.5 block mt-2 mx-auto rounded-full borda-inferior" />
                 </div>
-                <div className='flex flex-col items-center text-center m-4 px-10  gap-5 md:mx-16 lg:flex-row lg:justify-center'>
+                <div className='flex flex-col items-center text-center m-4 gap-5 md:mx-16 lg:flex-row lg:justify-center'>
                     <div className='flex flex-col gap-5 lg:w-3/6'>
                         <p>
                             Olá, sou o Kauan, um entusiasta apaixonado por tecnologia e programação web. <br /> Com uma sólida formação em desenvolvimento de software, transformo conceitos criativos em experiências digitais envolventes.
                         </p>
                         <p className='relative'>
                             Vamos criar algo extraordinário juntos!
-                            {/* <Image
-                    height={100}
-                    width={50}
-                    src='/rocket.svg'
-                    alt='Alternative text for the image'
-                    className='absolute top-5 right-0'
-                    /> */}
                         </p>
                     </div>
 
-                    <div className='relative my-10 flex items-center justify-center h-48 w-48 p-1 md:h-60 md:w-60 bubble-background2 rounded-full'>
-                        <div className='h-full w-full rounded-full overflow-hidden'>
+                    <div className='h-64 w-64 my-10 flex items-center justify-center bubble-background2 rounded-full'>
+                        <div className=''>
                             <img
                                 src="/fotoPerfil.jpg"
-                                className='content object-cover'
+                                className='content object-cover h-60 w-60 rounded-full'
                                 alt="Alternative text for the image" />
                         </div>
                     </div>
@@ -151,13 +144,6 @@ export default function About() {
                         </p>
                         <p className='relative'>
                             Vamos criar algo extraordinário juntos!
-                            {/* <Image
-                    height={100}
-                    width={50}
-                    src='/rocket.svg'
-                    alt='Alternative text for the image'
-                    className='absolute top-5 right-0'
-                    /> */}
                         </p>
                     </div>
 
