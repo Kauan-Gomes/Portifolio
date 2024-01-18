@@ -3,10 +3,11 @@ import Image from "next/legacy/image"
 import React, { useEffect, useLayoutEffect } from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { gsap } from 'gsap'
+import Title from "./Title"
 
 
 export default function About() {
-    useLayoutEffect(() => {
+    useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
         gsap.to(".sobre", {
             x: 0,
@@ -18,7 +19,7 @@ export default function About() {
                 markers: false,
                 start: "top 330px",
                 end: "bottom 900px",
-                scrub: true,
+                scrub: 5,
             }
         })
 
@@ -27,7 +28,7 @@ export default function About() {
         }
     }, [])
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
         gsap.to(".sobre-lg", {
             x: 0,
@@ -40,7 +41,7 @@ export default function About() {
                 markers: false,
                 start: "top 330px",
                 end: "bottom 580px",
-                scrub: true,
+                scrub: 5,
             }
         })
 
@@ -49,67 +50,13 @@ export default function About() {
         }
     }, [])
 
-    useEffect(() => {
-        const colors = ['#1ae64d', '#189ddb', '#1ae64d', '#189ddb'];
-        const durationPerColor = 0.5;
-
-        const gradientElement = document.querySelector(".sobre .borda-inferior");
-
-        let currentIndex = 0;
-
-        const animateGradient = () => {
-            gsap.to(gradientElement, {
-                background: `linear-gradient(to right, ${colors[currentIndex]}, ${colors[currentIndex + 1]})`,
-                duration: durationPerColor,
-                ease: 'none',
-                onComplete: () => {
-                    currentIndex = (currentIndex + 1) % (colors.length - 1);
-                    animateGradient();
-                },
-            });
-        };
-
-        animateGradient();
-
-        return () => {
-            gsap.killTweensOf(gradientElement);
-        };
-    }, []);
-
-
-    useEffect(() => {
-        const colors = ['#1ae64d', '#189ddb', '#1ae64d', '#189ddb'];
-        const durationPerColor = 0.5;
-
-        const gradientElement = document.querySelector(".sobre-lg .borda-inferior");
-
-        let currentIndex = 0;
-
-        const animateGradient = () => {
-            gsap.to(gradientElement, {
-                background: `linear-gradient(to right, ${colors[currentIndex]}, ${colors[currentIndex + 1]})`,
-                duration: durationPerColor,
-                ease: 'none',
-                onComplete: () => {
-                    currentIndex = (currentIndex + 1) % (colors.length - 1);
-                    animateGradient();
-                },
-            });
-        };
-
-        animateGradient();
-
-        return () => {
-            gsap.killTweensOf(gradientElement);
-        };
-    }, []);
-
     return (
         <>
             <section className='text-white flex flex-col items-center -translate-x-[800px] opacity-0 sobre md:hidden'>
                 <div>
-                    <h2 className='text-3xl texto_alternativo relative'>Sobre Mim</h2>
-                    <span className="w-full h-0.5 block mt-2 mx-auto rounded-full borda-inferior" />
+                    <Title
+                        text='Sobre mim'
+                    />
                 </div>
                 <div className='flex flex-col items-center text-center m-4 gap-5 md:mx-16 lg:flex-row lg:justify-center'>
                     <div className='flex flex-col gap-5 lg:w-3/6'>
@@ -134,8 +81,9 @@ export default function About() {
 
             <section className='text-white flex-col items-center -translate-x-[800px] opacity-0 sobre-lg hidden md:flex'>
                 <div>
-                    <h2 className='text-3xl texto_alternativo relative'>Sobre Mim</h2>
-                    <span className="w-full h-0.5 block mt-2 mx-auto rounded-full borda-inferior" />
+                <Title
+                        text='Sobre mim'
+                    />                
                 </div>
                 <div className='flex flex-col items-center text-center m-4 gap-5 md:mx-16 lg:flex-row lg:justify-center'>
                     <div className='flex flex-col gap-5 lg:w-3/6'>
